@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'remote-server-monitoring'
+    scheme: https
+    basic_auth:
+      username: 'monitor_user'
+      password: 'YOUR_SECURE_PASSWORD_HERE'
+    static_configs:
+      - targets: ['node.my.domen']
